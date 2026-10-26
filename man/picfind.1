@@ -1,0 +1,29 @@
+.TH PICFIND 1 "2026-08-11" "PicFind 0.1"
+.SH NAME
+picfind \- hide and recover messages in PNG images using LSB steganography
+.SH SYNOPSIS
+.B picfind encode
+.RI " [options]"
+.br
+.B picfind decode
+.RI " [options]"
+.br
+.B picfind capacity
+.RI " [options]"
+.br
+.B picfind show
+.RI " [options]"
+.SH DESCRIPTION
+PicFind hides text or binary files inside PNG images using least-significant-bit encoding. It supports optional compression and password-based encryption.
+.SH EXAMPLES
+.TP
+picfind encode --image cat.png --message "secret" --output secret.png
+.TP
+picfind encode --image cat.png --input-file payload.bin --output secret.png
+.TP
+picfind decode --image secret.png --out-file recovered.bin
+.SH OPTIONS
+See the README.md for full usage and examples.
+.SH AUTHORS
+Written by the PicFind tooling team.
+*** End Patch
